@@ -5,6 +5,9 @@ from mrjob.step import MRStep
 ''' 
 python 05_average_taxi_distance.py test.txt
 python 05_average_taxi_distance.py yellow_tripdata_2016-01.csv > average_taxi_dist.csv
+
+
+python 05_average_taxi_distance.py -r emr s3://big-data-231/data/yellow_tripdata_2016-01.csv --output-dir=s3://big-data-231/output/job-taxid
 '''
 
 class MRTaxiTrip(MRJob):
